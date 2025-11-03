@@ -1,0 +1,1808 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-11-27 18:41+0000\n"
+"PO-Revision-Date: 2023-11-27 18:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: esc_html__;__;esc_attr_e;esc_html_e;html_e;_e;"
+"esc_attr_x;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:20
+msgid "404"
+msgstr ""
+
+#: 404.php:25
+msgid "Oops!, Page Not Found."
+msgstr ""
+
+#: 404.php:27
+msgid "Sorry, the requested page could not be found."
+msgstr ""
+
+#: 404.php:27
+msgid "Try searching?"
+msgstr ""
+
+#: 404.php:29
+msgid "Go Back Home"
+msgstr ""
+
+#: archive.php:68 front-page.php:101 home.php:81 search.php:67
+msgid "Newer Posts"
+msgstr ""
+
+#: archive.php:69 front-page.php:102 home.php:82 search.php:68
+msgid "Older Posts"
+msgstr ""
+
+#: comments.php:37
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:37
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:37
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:57
+msgid "Reply"
+msgstr ""
+
+#: comments.php:63
+msgid "Previous"
+msgstr ""
+
+#: comments.php:64
+msgid "Next"
+msgstr ""
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:77
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:78
+msgid "Split Menu Left Items"
+msgstr ""
+
+#: functions.php:79
+msgid "Split Menu Right Items"
+msgstr ""
+
+#: functions.php:80
+msgid "Toggle Sidebar Primary Menu"
+msgstr ""
+
+#: functions.php:81
+msgid "Header Secondary Menu"
+msgstr ""
+
+#: functions.php:82
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:120
+msgid "Static Sidebar"
+msgstr ""
+
+#: functions.php:122
+msgid "Add widgets here to appear in your static sidebar"
+msgstr ""
+
+#: functions.php:130
+msgid "Slide Out Sidebar"
+msgstr ""
+
+#: functions.php:132
+msgid "Add widgets here to appear in your slide out sidebar"
+msgstr ""
+
+#: functions.php:156
+msgid "on"
+msgstr ""
+
+#: functions.php:448
+msgid "Menu"
+msgstr ""
+
+#: functions.php:454 searchform.php:20
+msgid "Search"
+msgstr ""
+
+#: functions.php:506
+msgid "Posted in"
+msgstr ""
+
+#: functions.php:506
+msgid "in"
+msgstr ""
+
+#: functions.php:635
+msgid "Posted by"
+msgstr ""
+
+#: functions.php:637
+msgid "by"
+msgstr ""
+
+#: functions.php:707
+msgid " Comment"
+msgstr ""
+
+#: functions.php:707
+msgid " Comments"
+msgstr ""
+
+#: functions.php:1339
+msgid "Updated"
+msgstr ""
+
+#: functions.php:1542
+msgid "Products"
+msgstr ""
+
+#: functions.php:1544 functions.php:1546 functions.php:1548 functions.php:1550
+#: functions.php:2171 functions.php:2181
+msgid "Posts"
+msgstr ""
+
+#: functions.php:1553
+msgid "Archive"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:393
+#: inc/class-tgm-plugin-activation.php:912
+#: inc/class-tgm-plugin-activation.php:2618
+#: inc/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:394
+#: inc/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+#: inc/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2427
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2567
+msgid "unknown"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/customizer/customizer.php:30
+msgid "Mozda: Theme Settings"
+msgstr ""
+
+#: inc/customizer/customizer.php:31
+msgid "Customize theme settings"
+msgstr ""
+
+#: inc/customizer/customizer_colors.php:24
+msgid "Mozda: Color Settings"
+msgstr ""
+
+#: inc/customizer/sections/colors/archive-header.php:16
+msgid "Archive/Category Header"
+msgstr ""
+
+#: inc/customizer/sections/colors/archive-header.php:31
+#: inc/customizer/sections/colors/header.php:31
+#: inc/customizer/sections/colors/scheme.php:203
+msgid "Header Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/archive-header.php:44
+msgid "Title Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/archive-header.php:57
+msgid "Description Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/archive-header.php:70
+msgid "Meta Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/category-tags.php:16
+msgid "Category Tags"
+msgstr ""
+
+#: inc/customizer/sections/colors/category-tags.php:30
+msgid "Default Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/category-tags.php:42
+msgid "Default Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/category-tags.php:56
+msgid "Default Background (Dark theme)"
+msgstr ""
+
+#: inc/customizer/sections/colors/category-tags.php:68
+msgid "Default Color  (Dark theme)"
+msgstr ""
+
+#: inc/customizer/sections/colors/category-tags.php:89
+#: inc/customizer/sections/colors/post-tags.php:31
+#: inc/customizer/sections/colors/scheme.php:687
+msgid "Tag Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/category-tags.php:102
+#: inc/customizer/sections/colors/post-tags.php:44
+#: inc/customizer/sections/colors/post-tags.php:65
+#: inc/customizer/sections/colors/scheme.php:700
+msgid "Tag Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/color-mode.php:16
+msgid "Color Mode"
+msgstr ""
+
+#: inc/customizer/sections/colors/color-mode.php:27
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer/sections/colors/color-mode.php:31
+msgid "System Preference"
+msgstr ""
+
+#: inc/customizer/sections/colors/color-mode.php:32
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer/sections/colors/color-mode.php:33
+msgid "Light"
+msgstr ""
+
+#: inc/customizer/sections/colors/color-mode.php:45
+msgid "Show Color Mode Toggle"
+msgstr ""
+
+#: inc/customizer/sections/colors/dark.php:18
+msgid "Dark Theme"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:16
+msgid "Entry Colors"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:31
+#: inc/customizer/sections/colors/scheme.php:363
+msgid "Post Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:44
+#: inc/customizer/sections/colors/scheme.php:376
+#: inc/customizer/sections/colors/scheme.php:526
+msgid "Entry Title Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:57
+#: inc/customizer/sections/colors/scheme.php:539
+msgid "Excerpt Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:70
+#: inc/customizer/sections/colors/scheme.php:402
+#: inc/customizer/sections/colors/scheme.php:552
+msgid "Entry Meta Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:83
+#: inc/customizer/sections/colors/scheme.php:415
+#: inc/customizer/sections/colors/scheme.php:565
+msgid "Entry Meta Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:100
+#: inc/customizer/sections/colors/scheme.php:112
+#: inc/customizer/sections/colors/scheme.php:432
+#: inc/customizer/sections/colors/theme.php:115
+msgid "Button Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:113
+#: inc/customizer/sections/colors/scheme.php:136
+#: inc/customizer/sections/colors/scheme.php:445
+#: inc/customizer/sections/colors/theme.php:127
+msgid "Button Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:126
+#: inc/customizer/sections/colors/scheme.php:458
+#: inc/customizer/sections/colors/theme.php:139
+msgid "Button Hover Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:139
+#: inc/customizer/sections/colors/scheme.php:471
+#: inc/customizer/sections/colors/theme.php:151
+msgid "Button Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:152
+msgid "Post Format & Sticky Icon Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:165
+msgid "Post Format & Sticky Icon Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:194
+msgid "Single Font Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:219
+msgid "Single Hero Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:232
+msgid "Single Hero Title Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:245
+msgid "Single Hero Entry Meta Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:258
+msgid "Single Hero Entry Meta Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:281
+msgid "Cover/Image Format"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:282
+msgid "Cover settings apply to archive, blog and single posts"
+msgstr ""
+
+#: inc/customizer/sections/colors/entry.php:300
+msgid "Primary Text Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/footer.php:16
+msgid "Footer Colors"
+msgstr ""
+
+#: inc/customizer/sections/colors/footer.php:31
+msgid "Footer Background Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/footer.php:44
+msgid "Footer Heading Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/footer.php:57
+msgid "Footer Font Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/footer.php:70
+#: inc/customizer/sections/colors/scheme.php:336
+msgid "Footer Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/footer.php:83
+msgid "Footer Line Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/footer.php:96
+#: inc/customizer/sections/colors/toggle-sidebar.php:109
+msgid "Misc. Elements Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/header.php:16
+msgid "Header Colors"
+msgstr ""
+
+#: inc/customizer/sections/colors/header.php:44
+#: inc/customizer/sections/colors/scheme.php:229
+msgid "Header Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/header.php:45
+#: inc/customizer/sections/colors/scheme.php:230
+msgid "Menus and Icons"
+msgstr ""
+
+#: inc/customizer/sections/colors/header.php:58
+#: inc/customizer/sections/colors/scheme.php:257
+msgid "Header Elements Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/header.php:71
+#: inc/customizer/sections/colors/scheme.php:270
+msgid "Header Elements Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/light.php:18
+msgid "Light Theme"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:16
+msgid "Misc. Colors"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:31
+msgid "Primary Menu Pill Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:44
+msgid "Primary Menu Pill Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:57
+msgid "Primary Menu Pill Hover Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:70
+msgid "Primary Menu Pill Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:83
+#: inc/customizer/sections/colors/scheme.php:846
+msgid "Meta Theme Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:96
+#: inc/customizer/sections/colors/scheme.php:859
+msgid "Menu Sash Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/misc.php:109
+#: inc/customizer/sections/colors/scheme.php:872
+msgid "Menu Sash Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/post-tags.php:16
+#: inc/customizer/sections/customizer-single.php:255
+msgid "Post Tags"
+msgstr ""
+
+#: inc/customizer/sections/colors/primary-menu.php:25
+msgid "Primary Menu Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/primary-menu.php:38
+msgid "Primary Menu Link Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/primary-menu.php:51
+msgid "Primary Menu Description Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/primary-menu.php:64
+msgid "Primary Menu Sub-Menu Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/primary-menu.php:77
+msgid "Primary Menu Sub-Menu Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/primary-menu.php:90
+msgid "Primary Menu Sub-Menu Link Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/primary-menu.php:103
+msgid "Primary Menu Sub-Menu Line Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:27
+#: inc/customizer/sections/colors/theme.php:30
+#: inc/gutenberg_color_palette.php:8
+msgid "Primary Theme Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:41
+#: inc/customizer/sections/colors/theme.php:44
+#: inc/gutenberg_color_palette.php:13
+msgid "Secondary Theme Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:56
+#: inc/customizer/sections/colors/theme.php:59
+#: inc/gutenberg_color_palette.php:18
+msgid "Tertiary Theme Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:75
+#: inc/customizer/sections/colors/theme.php:78
+msgid "Body Font Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:88
+#: inc/customizer/sections/colors/theme.php:91
+msgid "Body Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:100
+#: inc/customizer/sections/colors/theme.php:103
+msgid "Body Link Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:124
+msgid "Button Background Gradient"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:163
+msgid "Body Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:176
+msgid "Body Gradient"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:216
+msgid "Header Gradient"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:243
+msgid "Logo Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:244
+msgid "Or upload a logo"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:297
+msgid "Footer Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:310
+msgid "Footer Gradient"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:323
+msgid "Footer Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:389
+msgid "Entry Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:484
+msgid "Cover/Image Format Primary Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:511
+msgid "Single Post & Page"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:594
+msgid "Category Header Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:607
+msgid "Category Header Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:620
+msgid "Category Header Meta Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:647
+msgid "Section Header Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:660
+msgid "Section Header Meta Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:727
+msgid "Widget Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:740
+msgid "Widget Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:753
+#: inc/customizer/sections/colors/widgets-sidebar.php:44
+msgid "Widget Title Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:767
+#: inc/customizer/sections/colors/widgets-sidebar.php:83
+msgid "Widget Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:794
+msgid "CTA Button Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:807
+msgid "CTA Button Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:820
+msgid "CTA Button Hover Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/scheme.php:833
+msgid "CTA Button Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/theme.php:16
+msgid "Theme Color Scheme"
+msgstr ""
+
+#: inc/customizer/sections/colors/toggle-sidebar.php:16
+#: inc/customizer/sections/customizer-logo.php:204
+msgid "Toggle Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/colors/toggle-sidebar.php:31
+msgid "Sidebar Background"
+msgstr ""
+
+#: inc/customizer/sections/colors/toggle-sidebar.php:44
+msgid "Sidebar Heading Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/toggle-sidebar.php:57
+msgid "Sidebar Font Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/toggle-sidebar.php:70
+msgid "Sidebar Border Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/toggle-sidebar.php:83
+msgid "Sidebar Logo Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/toggle-sidebar.php:96
+msgid "Sidebar Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:16
+msgid "Widgets (Sidebar)"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:31
+msgid "Widget Background Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:57
+msgid "Widget Subtitle Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:70
+msgid "Widget Font Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:96
+msgid "Widget Child Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:109
+msgid "Widget Meta Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:122
+msgid "Widget Meta Link Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:135
+msgid "Widget Button Color"
+msgstr ""
+
+#: inc/customizer/sections/colors/widgets-sidebar.php:148
+msgid "Widget Button Text Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:16
+msgid "Archive/Category Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:29
+#: inc/customizer/sections/customizer-homepage.php:34
+#: inc/customizer/sections/customizer-page.php:29
+#: inc/customizer/sections/customizer-single.php:33
+msgid "Display Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:41
+#: inc/customizer/sections/customizer-homepage.php:75
+#: inc/customizer/sections/customizer-mobile.php:45
+msgid "Post Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:45
+#: inc/customizer/sections/customizer-homepage.php:79
+msgid "Masonry"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:46
+#: inc/customizer/sections/customizer-homepage.php:80
+#: inc/customizer/sections/customizer-mobile.php:49
+#: inc/customizer/sections/customizer-single.php:306
+msgid "Grid"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:47
+#: inc/customizer/sections/customizer-homepage.php:81
+#: inc/customizer/sections/customizer-mobile.php:50
+#: inc/customizer/sections/customizer-single.php:307
+msgid "List"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:57
+#: inc/customizer/sections/customizer-homepage.php:107
+#: inc/customizer/sections/customizer-single.php:61
+msgid "Post Style"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:61
+#: inc/customizer/sections/customizer-header.php:33
+#: inc/customizer/sections/customizer-header.php:46
+#: inc/customizer/sections/customizer-homepage.php:111
+#: inc/customizer/sections/customizer-page.php:61
+#: inc/customizer/sections/customizer-single.php:65
+#: inc/customizer/sections/customizer-single.php:322
+msgid "Default"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:62
+#: inc/customizer/sections/customizer-homepage.php:112
+#: inc/customizer/sections/customizer-page.php:62
+#: inc/customizer/sections/customizer-single.php:66
+#: inc/customizer/sections/customizer-single.php:323
+msgid "Default Alt."
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:63
+#: inc/customizer/sections/customizer-homepage.php:113
+#: inc/customizer/sections/customizer-page.php:63
+#: inc/customizer/sections/customizer-single.php:67
+#: inc/customizer/sections/customizer-single.php:324
+msgid "Cover"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:75
+#: inc/customizer/sections/customizer-homepage.php:92
+msgid "Number of Columns"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:94
+#: inc/customizer/sections/customizer-homepage.php:170
+#: inc/customizer/sections/customizer-mobile.php:77
+msgid "Excerpt"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:106
+#: inc/customizer/sections/customizer-homepage.php:182
+#: inc/customizer/sections/customizer-image-format.php:54
+msgid "Read More"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:119
+#: inc/customizer/sections/customizer-homepage.php:195
+#: inc/customizer/sections/customizer-image-format.php:67
+msgid "Entry Title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:132
+#: inc/customizer/sections/customizer-homepage.php:208
+#: inc/customizer/sections/customizer-image-format.php:80
+#: inc/customizer/sections/customizer-page.php:108
+#: inc/customizer/sections/customizer-single.php:98
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:144
+#: inc/customizer/sections/customizer-homepage.php:220
+#: inc/customizer/sections/customizer-image-format.php:92
+#: inc/customizer/sections/customizer-page.php:74
+#: inc/customizer/sections/customizer-single.php:78
+msgid "Thumbnail Aspect Ratio"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:148
+#: inc/customizer/sections/customizer-homepage.php:224
+#: inc/customizer/sections/customizer-image-format.php:96
+#: inc/customizer/sections/customizer-page.php:78
+#: inc/customizer/sections/customizer-single.php:82
+msgid "Wide"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:149
+#: inc/customizer/sections/customizer-homepage.php:225
+#: inc/customizer/sections/customizer-image-format.php:97
+#: inc/customizer/sections/customizer-page.php:79
+#: inc/customizer/sections/customizer-single.php:83
+msgid "Landscape"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:150
+#: inc/customizer/sections/customizer-homepage.php:226
+#: inc/customizer/sections/customizer-image-format.php:98
+#: inc/customizer/sections/customizer-page.php:80
+#: inc/customizer/sections/customizer-single.php:84
+msgid "Portrait"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:151
+#: inc/customizer/sections/customizer-homepage.php:227
+#: inc/customizer/sections/customizer-image-format.php:99
+#: inc/customizer/sections/customizer-page.php:81
+#: inc/customizer/sections/customizer-single.php:85
+msgid "Square"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:152
+#: inc/customizer/sections/customizer-homepage.php:228
+#: inc/customizer/sections/customizer-image-format.php:100
+#: inc/customizer/sections/customizer-page.php:83
+#: inc/customizer/sections/customizer-single.php:87
+msgid "Uncropped"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:164
+#: inc/customizer/sections/customizer-homepage.php:240
+msgid "Video &amp; Audio"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:177
+#: inc/customizer/sections/customizer-homepage.php:253
+#: inc/customizer/sections/customizer-image-format.php:112
+#: inc/customizer/sections/customizer-mobile.php:90
+#: inc/customizer/sections/customizer-single.php:139
+msgid "\"by\""
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:190
+#: inc/customizer/sections/customizer-homepage.php:266
+#: inc/customizer/sections/customizer-image-format.php:125
+#: inc/customizer/sections/customizer-mobile.php:103
+#: inc/customizer/sections/customizer-single.php:152
+msgid "\"in\""
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:203
+#: inc/customizer/sections/customizer-homepage.php:279
+#: inc/customizer/sections/customizer-image-format.php:138
+#: inc/customizer/sections/customizer-mobile.php:116
+#: inc/customizer/sections/customizer-single.php:163
+msgid "Author"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:216
+#: inc/customizer/sections/customizer-homepage.php:292
+#: inc/customizer/sections/customizer-image-format.php:151
+#: inc/customizer/sections/customizer-mobile.php:129
+#: inc/customizer/sections/customizer-single.php:174
+msgid "Avatar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:229
+#: inc/customizer/sections/customizer-homepage.php:305
+#: inc/customizer/sections/customizer-image-format.php:164
+#: inc/customizer/sections/customizer-mobile.php:142
+#: inc/customizer/sections/customizer-single.php:185
+msgid "Nickname"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:242
+#: inc/customizer/sections/customizer-homepage.php:318
+#: inc/customizer/sections/customizer-image-format.php:177
+#: inc/customizer/sections/customizer-mobile.php:155
+#: inc/customizer/sections/customizer-single.php:196
+msgid "Category"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:256
+#: inc/customizer/sections/customizer-homepage.php:332
+#: inc/customizer/sections/customizer-image-format.php:191
+#: inc/customizer/sections/customizer-mobile.php:169
+#: inc/customizer/sections/customizer-single.php:231
+msgid "Read Time"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:270
+#: inc/customizer/sections/customizer-homepage.php:346
+#: inc/customizer/sections/customizer-image-format.php:205
+#: inc/customizer/sections/customizer-mobile.php:183
+#: inc/customizer/sections/customizer-single.php:244
+msgid "Comment Count"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:283
+#: inc/customizer/sections/customizer-homepage.php:359
+#: inc/customizer/sections/customizer-image-format.php:218
+#: inc/customizer/sections/customizer-mobile.php:196
+#: inc/customizer/sections/customizer-single.php:207
+msgid "Date"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:308
+msgid "Show Archive Title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:321
+msgid "Post Count"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:334
+msgid "Description"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:347
+msgid "Sub Categories"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:360
+msgid "Author Avatar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-archive.php:373
+msgid "Author Bio"
+msgstr ""
+
+#: inc/customizer/sections/customizer-footer.php:16
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-footer.php:29
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-footer.php:30
+msgid "Basic HTML is supported"
+msgstr ""
+
+#: inc/customizer/sections/customizer-footer.php:43
+msgid "Display Social Icons"
+msgstr ""
+
+#: inc/customizer/sections/customizer-footer.php:44
+msgid ""
+"Configure icon style in: Appearance > TFM Social Media Channels: Site Footer"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:21
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:34
+msgid "Site Width"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:35
+#: inc/customizer/sections/customizer-general.php:49
+#: inc/customizer/sections/customizer-general.php:67
+#: inc/customizer/sections/customizer-general.php:82
+#: inc/customizer/sections/customizer-general.php:98
+#: inc/customizer/sections/customizer-general.php:129
+#: inc/customizer/sections/customizer-general.php:145
+msgid "Default:"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:48
+msgid "Sidebar Width"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:66
+msgid "Content Width"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:81
+msgid "Default Border Radius"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:97
+msgid "Post Thumbnail Border Radius"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:113
+msgid "Post Image Embed Border Radius"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:128
+msgid "Input Field Border Radius"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:144
+msgid "Button Border Radius"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:160
+msgid "Number of Category Tags In Archive displays"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:175
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:191
+msgid "Show Primary Nav in Toggle Sidebar on Desktop"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:204
+msgid "Remove Archive Title Label"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:219
+msgid "Logo - Dark Theme"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:232
+msgid "Toggle Sidebar Logo"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:245
+msgid "Toggle Sidebar Logo - Dark Theme"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:258
+msgid "Mobile Logo"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:271
+msgid "Mobile Logo - Dark Theme"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:284
+msgid "Footer Logo"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:297
+msgid "Footer Logo - Dark Theme"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:312
+msgid "Make Static Sidebar Sticky"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:325
+msgid "Show Post Format Icons"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:338
+msgid "Show Back To Top On Scroll"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:351
+msgid "Show Pagination Numbers"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:364
+msgid "Show Pagination Prev/Next"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:379
+msgid "Show on single post/page"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:390
+msgid "Show on archive pages"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:16
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:29
+#: inc/customizer/sections/customizer-header.php:42
+msgid "Header Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:34
+msgid "Logo Center Split Menu (supports overlay)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:35
+msgid "Logo Left w/Menu (supports overlay)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:36
+#: inc/customizer/sections/customizer-header.php:50
+msgid "Logo Below Nav"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:37
+msgid "Default w/Advert"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:47
+msgid "Default Logo Left"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:48
+msgid "Logo Center Split Menu"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:49
+msgid "Logo Left w/Menu"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:63
+msgid "Full width"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:87
+msgid "Overlay Header"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:88
+msgid ""
+"Enable overlay header for single post and homepage layouts that support it. "
+"E.g. Full width single posts and homepage sliders"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:101
+msgid "Single Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:114
+msgid "Homepage"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:136
+msgid "Show Toggle Menu on Desktop"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:149
+msgid "Show Toggle Menu on Mobile"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:162
+msgid "Show Toggle Search on Desktop"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:175
+msgid "Show Toggle Search on Mobile"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:188
+msgid "Make Header Nav Sticky on Desktop"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:201
+msgid "Make Header Nav Sticky on Mobile"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:214
+msgid "Show Site Tagline"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:21
+msgid "Homepage Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:47
+msgid "Title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:59
+msgid "Subtitle"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:124
+msgid "Offset (Number of Posts to Skip)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:140
+msgid "Exclude Post IDs"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:141
+msgid ""
+"Enter a comma separated List of post IDs you want to exclude from the "
+"homepage"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:154
+msgid "Exclude Categories"
+msgstr ""
+
+#: inc/customizer/sections/customizer-homepage.php:155
+msgid ""
+"Enter a comma separated List of categories (ID or slug) you want to exclude "
+"from the homepage"
+msgstr ""
+
+#: inc/customizer/sections/customizer-image-format.php:16
+msgid "Image Format Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-image-format.php:29
+msgid "Use Archive &amp; Homepage Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-image-format.php:42
+msgid "Excerpt (Auto-Generated)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:16
+msgid "Logo Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:30
+msgid ""
+"Upload and manage your logos in in Appearance > Customize > Site Identity"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:44
+msgid "Site title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:57
+msgid "Font Size *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:75
+msgid "Large Mobile Font Size *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:93
+msgid "Small Mobile Font Size *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:124
+msgid "Custom Logo"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:137
+msgid "Max Width Desktop *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:155
+msgid "Max Width Large Mobile *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:173
+msgid "Max Width Small Mobile *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:217
+msgid "Site Title Font Size *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:235
+#: inc/customizer/sections/customizer-logo.php:281
+msgid "Custom Logo Max Width *px"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:253
+msgid "Display Sidebar Logo/Site Title"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:268
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/sections/customizer-mobile.php:20
+msgid "Mobile Display Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-mobile.php:33
+msgid "Hide Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-mobile.php:63
+msgid "Hide meta data on mobile devices"
+msgstr ""
+
+#: inc/customizer/sections/customizer-mobile.php:64
+msgid "These settings apply to homepage, archive, blog and search results"
+msgstr ""
+
+#: inc/customizer/sections/customizer-mobile.php:210
+msgid "Post Views"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:16
+msgid "Page Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:41
+#: inc/customizer/sections/customizer-single.php:45
+msgid "Sidebar Position"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:45
+#: inc/customizer/sections/customizer-single.php:49
+msgid "Side"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:46
+#: inc/customizer/sections/customizer-single.php:50
+msgid "After Header"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:57
+msgid "Page Style"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:82
+#: inc/customizer/sections/customizer-single.php:86
+msgid "Hero"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:95
+#: inc/customizer/sections/customizer-single.php:112
+msgid "Full Width"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:119
+msgid "Show Page Title on Front Page"
+msgstr ""
+
+#: inc/customizer/sections/customizer-page.php:120
+msgid "If your Homepage is set to a page"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:20
+msgid "Single Post Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:126
+msgid "Display Custom excerpt"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:218
+msgid "Updated Date"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:266
+msgid "Post Tag Count"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:290
+msgid "Previous/Next Post"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:302
+msgid "Prev/Next Post Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:318
+msgid "Prev/Next Post Style"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:336
+msgid "Prev/Next Post Thumbnail"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:348
+msgid "Prev/Next Post Excerpt"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:360
+msgid "Prev/Next Post Category"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:372
+msgid "Prev/Next Post Header"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:397
+msgid "Author Bio Avatar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:410
+msgid "Author Bio Name"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:423
+msgid "Author Bio Info"
+msgstr ""
+
+#: inc/customizer/sections/customizer-single.php:436
+msgid "Click Button to Open Comments"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:23
+msgid "Black"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:28
+msgid "Very Dark Grey"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:33
+msgid "Dark Grey"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:38
+msgid "Medium Grey"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:43
+msgid "Light Grey"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:48
+msgid "Light/Dark Theme Highlight"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:62
+msgid "Primary to Secondary"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:67
+msgid "Secondary to Tertiary"
+msgstr ""
+
+#: inc/gutenberg_color_palette.php:72
+msgid "Primary to Tertiary"
+msgstr ""
+
+#: searchform.php:17
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:19
+msgid "Search and press enter"
+msgstr ""
+
+#: sidebar-search.php:14
+msgid "Search Sidebar"
+msgstr ""
+
+#: sidebar-search.php:17 sidebar-slide.php:29
+msgid "close"
+msgstr ""
+
+#: sidebar-slide.php:18
+msgid "Blog Sidebar"
+msgstr ""
+
+#: sidebar.php:23
+msgid "Sidebar"
+msgstr ""
+
+#: template-parts/page/content.php:163
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/post/content-none.php:29
+msgid ""
+"Sorry, nothing matched your search terms. Please try again with some "
+"different keywords"
+msgstr ""
+
+#: template-parts/post/content.php:208
+msgid "Next page"
+msgstr ""
+
+#: template-parts/post/content.php:209
+msgid "Previous page"
+msgstr ""
+
+#: template-parts/post/hentry-footer.php:24
+msgid "read more"
+msgstr ""
+
+#: template-parts/post/read-more.php:15
+msgid "Continue Reading"
+msgstr ""
+
+#: template-parts/post/single-authorbio.php:31
+msgid "Written by"
+msgstr ""
+
+#: template-parts/post/single-post-navigation.php:42
+msgid "More Reading"
+msgstr ""
+
+#: template-parts/post/single-post-navigation.php:60
+#: template-parts/post/single-post-navigation.php:86
+msgid "Previous Post"
+msgstr ""
+
+#: template-parts/post/single-post-navigation.php:131
+#: template-parts/post/single-post-navigation.php:157
+msgid "Next Post"
+msgstr ""

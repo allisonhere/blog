@@ -1,0 +1,836 @@
+/**
+ * Graphic Enhancements for Personal Blog Theme
+ * 
+ * Modern visual effects and treatments
+ * Comprehensive graphic treatment implementation
+ */
+
+/* ============================================
+   GRADIENT ACCENTS & ANIMATIONS
+   ============================================ */
+
+:root {
+	/* Enhanced Gradient Variables */
+	--gradient-primary: linear-gradient(135deg, #da4453 0%, #89216b 100%);
+	--gradient-secondary: linear-gradient(135deg, #89216b 0%, #ffb14f 100%);
+	--gradient-accent: linear-gradient(135deg, #da4453 0%, #ffb14f 100%);
+	--gradient-rainbow: linear-gradient(135deg, #da4453 0%, #89216b 50%, #ffb14f 100%);
+	
+	/* Animation Variables */
+	--gradient-animation-speed: 3s;
+	--hover-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	
+	/* Neon Glow Effects */
+	--neon-glow-primary: 0 0 10px rgba(218, 68, 83, 0.5),
+	                     0 0 20px rgba(218, 68, 83, 0.3),
+	                     0 0 30px rgba(218, 68, 83, 0.2);
+	--neon-glow-secondary: 0 0 10px rgba(137, 33, 107, 0.5),
+	                       0 0 20px rgba(137, 33, 107, 0.3);
+	--neon-glow-tertiary: 0 0 10px rgba(255, 177, 79, 0.5),
+	                      0 0 20px rgba(255, 177, 79, 0.3);
+	
+	/* Glassmorphism */
+	--glass-background: rgba(255, 255, 255, 0.1);
+	--glass-backdrop-blur: 20px;
+	--glass-border: 1px solid rgba(255, 255, 255, 0.2);
+	--glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	
+	/* Enhanced Shadows */
+	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+	--shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+	--shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+	--shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+	--shadow-colored: 0 8px 24px rgba(218, 68, 83, 0.25);
+	
+	/* Card Effects */
+	--card-hover-lift: translateY(-8px);
+	--card-hover-scale: scale(1.02);
+	--card-tilt-angle: 2deg;
+}
+
+/* ============================================
+   ANIMATED GRADIENT BACKGROUNDS
+   ============================================ */
+
+@keyframes gradient-shift {
+	0%, 100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+.gradient-animated {
+	background: linear-gradient(-45deg, #da4453, #89216b, #ffb14f, #da4453);
+	background-size: 400% 400%;
+	animation: gradient-shift var(--gradient-animation-speed) ease infinite;
+}
+
+/* ============================================
+   POST CARD ENHANCEMENTS
+   ============================================ */
+
+.article {
+	transition: var(--hover-transition);
+	position: relative;
+	overflow: hidden;
+}
+
+.article::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--gradient-primary);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.article:hover {
+	transform: var(--card-hover-lift);
+	box-shadow: var(--shadow-xl);
+}
+
+.article:hover::before {
+	opacity: 0.05;
+}
+
+/* Enhanced Post Thumbnail Effects */
+.post-thumbnail {
+	position: relative;
+	overflow: hidden;
+}
+
+.post-thumbnail::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--gradient-primary);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 1;
+}
+
+.article:hover .post-thumbnail::after {
+	opacity: 0.2;
+}
+
+.post-thumbnail img {
+	transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article:hover .post-thumbnail img {
+	transform: scale(1.1);
+}
+
+/* ============================================
+   GLASSMORPHISM EFFECTS
+   ============================================ */
+
+.glass-effect {
+	background: var(--glass-background);
+	backdrop-filter: blur(var(--glass-backdrop-blur));
+	-webkit-backdrop-filter: blur(var(--glass-backdrop-blur));
+	border: var(--glass-border);
+	box-shadow: var(--glass-shadow);
+}
+
+/* Apply to header */
+.site-header.glass-header {
+	background: transparent;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode glass */
+[data-color-mode="dark"] .site-header.glass-header {
+	background: transparent;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   NEON GLOW EFFECTS
+   ============================================ */
+
+/* Category Tags with Neon Glow */
+.cat-slug,
+[class*="cat-link"] {
+	position: relative;
+	transition: var(--hover-transition);
+}
+
+.cat-slug:hover,
+[class*="cat-link"]:hover {
+	box-shadow: var(--neon-glow-primary);
+	transform: translateY(-2px);
+}
+
+/* Buttons with Neon Effect */
+.button,
+.read-more-button .button,
+.continue-reading-button {
+	position: relative;
+	overflow: hidden;
+	transition: var(--hover-transition);
+}
+
+.button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+	transition: left 0.5s ease;
+}
+
+.button:hover::before {
+	left: 100%;
+}
+
+.button:hover {
+	box-shadow: var(--neon-glow-primary);
+	transform: translateY(-2px);
+}
+
+/* ============================================
+   TYPOGRAPHY ENHANCEMENTS
+   ============================================ */
+
+/* Gradient Text Effect */
+.gradient-text {
+	background: var(--gradient-primary);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Enhanced Text Shadows */
+.entry-title {
+	transition: var(--hover-transition);
+}
+
+.entry-title:hover {
+	text-shadow: 2px 2px 0 rgba(218, 68, 83, 0.2),
+	             4px 4px 0 rgba(137, 33, 107, 0.15);
+}
+
+/* Animated Underline */
+.animated-underline {
+	position: relative;
+	text-decoration: none;
+}
+
+.animated-underline::after {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--gradient-primary);
+	transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+	width: 100%;
+}
+
+/* ============================================
+   BORDER ANIMATIONS
+   ============================================ */
+
+.animated-border {
+	position: relative;
+	border: 2px solid transparent;
+	background-clip: padding-box;
+}
+
+.animated-border::before {
+	content: '';
+	position: absolute;
+	inset: -2px;
+	border-radius: inherit;
+	padding: 2px;
+	background: var(--gradient-primary);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	animation: border-rotate 3s linear infinite;
+}
+
+@keyframes border-rotate {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+/* ============================================
+   RIPPLE EFFECT
+   ============================================ */
+
+.ripple-effect {
+	position: relative;
+	overflow: hidden;
+}
+
+.ripple-effect::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: rgba(218, 68, 83, 0.3);
+	transform: translate(-50%, -50%);
+	transition: width 0.6s, height 0.6s;
+}
+
+.ripple-effect:active::after {
+	width: 300px;
+	height: 300px;
+}
+
+/* ============================================
+   FLOATING ANIMATION
+   ============================================ */
+
+@keyframes float {
+	0%, 100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+.floating {
+	animation: float 6s ease-in-out infinite;
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ============================================
+   ENHANCED SHADOWS & DEPTH
+   ============================================ */
+
+.depth-1 { box-shadow: var(--shadow-sm); }
+.depth-2 { box-shadow: var(--shadow-md); }
+.depth-3 { box-shadow: var(--shadow-lg); }
+.depth-4 { box-shadow: var(--shadow-xl); }
+
+.shadow-colored {
+	box-shadow: var(--shadow-colored);
+}
+
+/* ============================================
+   BACK TO TOP BUTTON ENHANCEMENT
+   ============================================ */
+
+.goto-top.backtotop {
+	background: var(--gradient-primary);
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	box-shadow: var(--neon-glow-primary);
+	transition: var(--hover-transition);
+}
+
+.goto-top.backtotop:hover {
+	transform: translateY(-4px) scale(1.1);
+	box-shadow: var(--neon-glow-secondary);
+}
+
+/* ============================================
+   WIDGET ENHANCEMENTS
+   ============================================ */
+
+.widget {
+	transition: var(--hover-transition);
+}
+
+.widget:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   ARCHIVE HEADER ENHANCEMENTS
+   ============================================ */
+
+.archive-header {
+	position: relative;
+	overflow: hidden;
+}
+
+.archive-header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--gradient-primary);
+	opacity: 0.03;
+	z-index: 0;
+}
+
+.archive-header > * {
+	position: relative;
+	z-index: 1;
+}
+
+/* ============================================
+   DARK MODE ENHANCEMENTS
+   ============================================ */
+
+[data-color-mode="dark"] {
+	--neon-glow-primary: 0 0 15px rgba(218, 68, 83, 0.6),
+	                     0 0 30px rgba(218, 68, 83, 0.4),
+	                     0 0 45px rgba(218, 68, 83, 0.3);
+	--neon-glow-secondary: 0 0 15px rgba(137, 33, 107, 0.6),
+	                       0 0 30px rgba(137, 33, 107, 0.4);
+}
+
+/* ============================================
+   ACCESSIBILITY: REDUCE MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* ============================================
+   RESPONSIVE ENHANCEMENTS
+   ============================================ */
+
+/* ============================================
+   ENTRY TITLE GRADIENT EFFECTS
+   ============================================ */
+
+.entry-title a {
+	background: linear-gradient(135deg, var(--entry-title-color) 0%, var(--entry-title-color) 50%, var(--primary-theme-color) 50%, var(--primary-theme-color) 100%);
+	background-size: 200% 100%;
+	background-position: 100% 0;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: background-position 0.4s ease;
+}
+
+.entry-title a:hover {
+	background-position: 0% 0;
+}
+
+/* Single entry titles */
+.single-entry-title {
+	position: relative;
+}
+
+.single-entry-title::after {
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	width: 60px;
+	height: 4px;
+	background: var(--gradient-primary);
+	border-radius: 2px;
+}
+
+/* ============================================
+   BACKGROUND PATTERNS & TEXTURES
+   ============================================ */
+
+body {
+	position: relative;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: 
+		radial-gradient(circle at 20% 50%, rgba(218, 68, 83, 0.03) 0%, transparent 50%),
+		radial-gradient(circle at 80% 80%, rgba(137, 33, 107, 0.03) 0%, transparent 50%),
+		radial-gradient(circle at 40% 20%, rgba(255, 177, 79, 0.02) 0%, transparent 50%);
+	pointer-events: none;
+	z-index: -1;
+	animation: background-shift 20s ease infinite;
+}
+
+@keyframes background-shift {
+	0%, 100% {
+		transform: translate(0, 0) scale(1);
+	}
+	33% {
+		transform: translate(20px, -20px) scale(1.1);
+	}
+	66% {
+		transform: translate(-20px, 20px) scale(0.9);
+	}
+}
+
+/* Subtle noise texture */
+.post-inner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.article:hover .post-inner::before {
+	opacity: 1;
+}
+
+/* ============================================
+   ENHANCED BUTTON STYLES
+   ============================================ */
+
+.button,
+.read-more-button .button,
+.read-more,
+.continue-reading-button {
+	position: relative;
+	background: var(--gradient-primary);
+	border: none;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.button::after,
+.read-more-button .button::after,
+.read-more::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--gradient-secondary);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: -1;
+}
+
+.button:hover::after,
+.read-more-button .button:hover::after,
+.read-more:hover::after {
+	opacity: 1;
+}
+
+/* ============================================
+   MENU ENHANCEMENTS
+   ============================================ */
+
+.primary-menu a,
+.header-secondary a {
+	position: relative;
+	transition: var(--hover-transition);
+}
+
+.primary-menu a::after,
+.header-secondary a::after {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--gradient-primary);
+	transition: width 0.3s ease;
+}
+
+.primary-menu a:hover::after,
+.header-secondary a:hover::after {
+	width: 100%;
+}
+
+/* ============================================
+   CATEGORY TAGS ENHANCEMENT
+   ============================================ */
+
+.cat-slug a,
+[class*="cat-link"] {
+	position: relative;
+	padding: 0.25rem 0.75rem;
+	border-radius: 20px;
+	background: rgba(218, 68, 83, 0.1);
+	transition: var(--hover-transition);
+}
+
+.cat-slug a:hover,
+[class*="cat-link"]:hover {
+	background: var(--gradient-primary);
+	color: white !important;
+	transform: translateY(-2px) scale(1.05);
+	box-shadow: var(--neon-glow-primary);
+}
+
+/* ============================================
+   POST FORMAT ICONS ENHANCEMENT
+   ============================================ */
+
+.has-format-icons .article::after {
+	content: '';
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 40px;
+	height: 40px;
+	background: var(--gradient-primary);
+	border-radius: 50%;
+	opacity: 0.9;
+	z-index: 10;
+	box-shadow: var(--neon-glow-primary);
+	animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+		opacity: 0.9;
+	}
+	50% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+}
+
+/* ============================================
+   ENHANCED ARCHIVE HEADER
+   ============================================ */
+
+.archive-header-inner {
+	position: relative;
+}
+
+.archive-header::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: var(--gradient-primary);
+	opacity: 0.2;
+}
+
+/* ============================================
+   FOOTER ENHANCEMENTS
+   ============================================ */
+
+.site-footer {
+	position: relative;
+	overflow: hidden;
+}
+
+.site-footer::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: var(--gradient-primary);
+	opacity: 0.3;
+}
+
+/* ============================================
+   SIDEBAR ENHANCEMENTS
+   ============================================ */
+
+.widget-title {
+	position: relative;
+	padding-bottom: 0.5rem;
+}
+
+.widget-title::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 40px;
+	height: 3px;
+	background: var(--gradient-primary);
+	border-radius: 2px;
+}
+
+/* ============================================
+   SCROLL PROGRESS INDICATOR
+   ============================================ */
+
+.scroll-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background: var(--gradient-primary);
+	z-index: 9999;
+	transition: width 0.1s ease;
+	box-shadow: var(--neon-glow-primary);
+}
+
+/* ============================================
+   ENHANCED IMAGE MASKS
+   ============================================ */
+
+.post-thumbnail {
+	mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.article:hover .post-thumbnail {
+	mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
+}
+
+/* ============================================
+   GRID PATTERN OVERLAY
+   ============================================ */
+
+.wrap::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		linear-gradient(rgba(218, 68, 83, 0.01) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(218, 68, 83, 0.01) 1px, transparent 1px);
+	background-size: 50px 50px;
+	pointer-events: none;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+body:hover .wrap::before {
+	opacity: 1;
+}
+
+/* ============================================
+   ENHANCED LOADING STATES
+   ============================================ */
+
+@keyframes shimmer {
+	0% {
+		background-position: -1000px 0;
+	}
+	100% {
+		background-position: 1000px 0;
+	}
+}
+
+.loading-shimmer {
+	animation: shimmer 2s infinite;
+	background: linear-gradient(
+		to right,
+		transparent 0%,
+		rgba(218, 68, 83, 0.1) 50%,
+		transparent 100%
+	);
+	background-size: 1000px 100%;
+}
+
+/* ============================================
+   STICKY HEADER ENHANCEMENT
+   ============================================ */
+
+.has-sticky-nav .site-header.glass-header {
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.has-sticky-nav .site-header.glass-header.stuck {
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+[data-color-mode="dark"] .has-sticky-nav .site-header.glass-header.stuck {
+	background: rgba(19, 19, 21, 0.7);
+}
+
+/* ============================================
+   COVER POST STYLE ENHANCEMENTS
+   ============================================ */
+
+.cover.has-post-media .entry-title {
+	text-shadow: 
+		2px 2px 4px rgba(0, 0, 0, 0.5),
+		0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.cover.has-post-media .entry-title:hover {
+	text-shadow: 
+		2px 2px 4px rgba(0, 0, 0, 0.5),
+		0 0 30px rgba(218, 68, 83, 0.4);
+}
+
+/* ============================================
+   RESPONSIVE ENHANCEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+	.article:hover {
+		transform: translateY(-4px);
+	}
+	
+	--card-hover-lift: translateY(-4px);
+	
+	body::before {
+		animation: none;
+	}
+	
+	.entry-title a {
+		background: var(--entry-title-color);
+		-webkit-text-fill-color: var(--entry-title-color);
+	}
+}
