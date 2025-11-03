@@ -19,7 +19,7 @@ $tfm_vars = tfm_template_vars( 'content', array( 'count' => $count ));
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-card-3d' ); ?>>
 
 	<div class="post-inner">
 
