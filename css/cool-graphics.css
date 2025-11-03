@@ -1,0 +1,61 @@
+/* This file will contain custom CSS for cool graphic enhancements. */
+/* Interactive Hero Section with Animated Shapes */
+:root {
+    --hero-shape-color-1: rgba(218, 68, 83, 0.1); /* Primary Red with transparency */
+    --hero-shape-color-2: rgba(137, 33, 107, 0.1); /* Deep Purple with transparency */
+    --hero-shape-size-min: 50px;
+    --hero-shape-size-max: 150px;
+    --hero-animation-duration: 20s;
+    --hero-animation-delay-min: 0s;
+    --hero-animation-delay-max: 10s;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    /* Add other hero section styles here */
+}
+
+.hero-shape {
+    position: absolute;
+    background: var(--hero-shape-color-1);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: floatAndFade var(--hero-animation-duration) infinite ease-in-out alternate;
+    z-index: -1; /* Ensure shapes are behind content */
+}
+
+.hero-shape:nth-child(2) {
+    background: var(--hero-shape-color-2);
+    animation-delay: calc(var(--hero-animation-delay-max) / 2);
+}
+
+.hero-shape:nth-child(3) {
+    background: var(--hero-shape-color-1);
+    animation-delay: calc(var(--hero-animation-delay-max) / 3);
+}
+
+/* Add more nth-child for more shapes */
+
+@keyframes floatAndFade {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.8);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translateY(-20%) translateX(10%) scale(1.1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(0) translateX(0) scale(1.0);
+        opacity: 0.7;
+    }
+    75% {
+        transform: translateY(20%) translateX(-10%) scale(0.9);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0) translateX(0) scale(0.8);
+        opacity: 0.7;
+    }
+}
