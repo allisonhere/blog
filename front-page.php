@@ -15,15 +15,7 @@
 
 $tfm_vars = tfm_template_vars( '', false );
 
-<?php get_header(); ?>
-
-<div class="hero-section">
-    <span class="hero-shape"></span>
-    <span class="hero-shape"></span>
-    <span class="hero-shape"></span>
-    <span class="hero-shape"></span>
-    <span class="hero-shape"></span>
-</div>
+get_header(); ?>
 
 		<main id="main" class="site-main<?php echo esc_attr( $tfm_vars['show_pagination_numbers']  . $tfm_vars['show_pagination_prev_next'] ); ?>">
 

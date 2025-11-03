@@ -32,11 +32,6 @@ $tfm_vars = tfm_template_vars('', false);
 
 	<?php wp_body_open(); ?>
 
-	<!-- Page Loader -->
-	<div class="page-loader" id="page-loader">
-		<div class="loader-spinner"></div>
-	</div>
-
 	<!-- toggle sidebar overlay -->
 	<div class="body-fade menu-overlay"></div>
 	<div class="body-fade search-overlay"></div>

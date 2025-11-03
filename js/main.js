@@ -263,14 +263,6 @@ $('.comments-pagination a.page-numbers').on('click', function() {
    }
 });
 
-/*---------------------------------------*/
-/* Page Loader                           */
-/*---------------------------------------*/
-$(window).on('load', function() {
-    $('#page-loader').addClass('hidden');
-});
-
-
 });
 
 /*---------------------------------------*/
