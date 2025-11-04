@@ -149,12 +149,15 @@
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	box-shadow: none;
+	transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 /* Dark mode glass */
 [data-color-mode="dark"] .site-header.glass-header {
 	background: transparent;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: none;
 }
 
 /* ============================================
@@ -218,12 +221,11 @@
 
 /* Enhanced Text Shadows */
 .entry-title {
-	transition: var(--hover-transition);
+	transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .entry-title:hover {
-	text-shadow: 2px 2px 0 rgba(218, 68, 83, 0.2),
-	             4px 4px 0 rgba(137, 33, 107, 0.15);
+	transform: translateY(-2px);
 }
 
 /* Animated Underline */
@@ -444,17 +446,34 @@
    ============================================ */
 
 .entry-title a {
-	background: linear-gradient(135deg, var(--entry-title-color) 0%, var(--entry-title-color) 50%, var(--primary-theme-color) 50%, var(--primary-theme-color) 100%);
-	background-size: 200% 100%;
-	background-position: 100% 0;
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	transition: background-position 0.4s ease;
+	position: relative;
+	color: var(--entry-title-color);
+	text-decoration: none;
+	transition: color 0.25s ease;
 }
 
-.entry-title a:hover {
-	background-position: 0% 0;
+.entry-title a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 0;
+	height: 2px;
+	border-radius: 999px;
+	background: var(--gradient-primary, linear-gradient(135deg, #da4453 0%, #89216b 100%));
+	opacity: 0.5;
+	transition: width 0.25s ease, opacity 0.25s ease;
+}
+
+.entry-title a:hover,
+.entry-title a:focus-visible {
+	color: var(--primary-theme-color);
+}
+
+.entry-title a:hover::after,
+.entry-title a:focus-visible::after {
+	width: 100%;
+	opacity: 1;
 }
 
 /* Single entry titles */
@@ -496,7 +515,6 @@ body::before {
 	z-index: -1;
 	animation: background-shift 20s ease infinite;
 }
-
 @keyframes background-shift {
 	0%, 100% {
 		transform: translate(0, 0) scale(1);
@@ -735,6 +753,24 @@ body::before {
    GRID PATTERN OVERLAY
    ============================================ */
 
+[data-color-mode="light"] .wrap::before,
+body:not([data-color-mode]) .wrap::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		linear-gradient(rgba(218, 68, 83, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(218, 68, 83, 0.04) 1px, transparent 1px);
+	background-size: 50px 50px;
+	pointer-events: none;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
 .wrap::before {
 	content: '';
 	position: absolute;
@@ -749,7 +785,7 @@ body::before {
 	pointer-events: none;
 	z-index: 0;
 	opacity: 0;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.3s.ease;
 }
 
 body:hover .wrap::before {

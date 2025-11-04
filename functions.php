@@ -154,8 +154,8 @@ if ( ! function_exists( 'tfm_fonts_url' ) ) {
 	    by chosen font(s), translate this to 'off'. Do not translate into your own language.
 	     */
 	    if ( 'off' !== _x( 'on', 'Google font: on or off', 'mozda' ) ) {
-	    	if ($font === 'jakarta') {
-		        $fonts_url = add_query_arg( 'family', 'Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap', "https://fonts.googleapis.com/css2" );
+	    	if ( $font === 'jakarta' ) {
+		        $fonts_url = 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Dancing+Script:wght@400;500;600;700&display=swap';
 		    }
 	    }
 		 
@@ -164,6 +164,188 @@ if ( ! function_exists( 'tfm_fonts_url' ) ) {
 	}
 
 }
+
+// ========================================================
+// Color utility helpers
+// ========================================================
+
+if ( ! function_exists( 'mozda_normalize_hex_color' ) ) {
+	/**
+	 * Normalize a hex color string to six digits with a leading hash.
+	 *
+	 * @param string $hex Potential hex color.
+	 * @return string Normalized hex string or empty string on failure.
+	 */
+	function mozda_normalize_hex_color( $hex ) {
+		$hex = sanitize_hex_color( $hex );
+
+		if ( ! $hex ) {
+			return '';
+		}
+
+		$hex = ltrim( $hex, '#' );
+
+		if ( 3 === strlen( $hex ) ) {
+			$hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+		}
+
+		return '#' . strtoupper( $hex );
+	}
+}
+
+if ( ! function_exists( 'mozda_hex_to_rgb_array' ) ) {
+	/**
+	 * Convert a hex color to an RGB array.
+	 *
+	 * @param string $hex Hex color string.
+	 * @return array{0:int,1:int,2:int}|null
+	 */
+	function mozda_hex_to_rgb_array( $hex ) {
+		$hex = mozda_normalize_hex_color( $hex );
+
+		if ( ! $hex ) {
+			return null;
+		}
+
+		$hex = ltrim( $hex, '#' );
+
+		return array(
+			hexdec( substr( $hex, 0, 2 ) ),
+			hexdec( substr( $hex, 2, 2 ) ),
+			hexdec( substr( $hex, 4, 2 ) ),
+		);
+	}
+}
+
+if ( ! function_exists( 'mozda_mix_hex_colors' ) ) {
+	/**
+	 * Blend two hex colors together by weight.
+	 *
+	 * @param string $base   Base color.
+	 * @param string $mix    Secondary color to mix with.
+	 * @param float  $weight Weight for the secondary color (0-1).
+	 * @return string Mixed hex color or empty string when invalid.
+	 */
+	function mozda_mix_hex_colors( $base, $mix, $weight = 0.5 ) {
+		$base_rgb = mozda_hex_to_rgb_array( $base );
+		$mix_rgb  = mozda_hex_to_rgb_array( $mix );
+
+		if ( null === $base_rgb || null === $mix_rgb ) {
+			return '';
+		}
+
+		$weight = max( 0, min( 1, floatval( $weight ) ) );
+
+		$channels = array_map(
+			function( $base_channel, $mix_channel ) use ( $weight ) {
+				return (int) round( ( 1 - $weight ) * $base_channel + $weight * $mix_channel );
+			},
+			$base_rgb,
+			$mix_rgb
+		);
+
+		return sprintf( '#%02X%02X%02X', $channels[0], $channels[1], $channels[2] );
+	}
+}
+
+if ( ! function_exists( 'mozda_lighten_hex_color' ) ) {
+	/**
+	 * Lighten a hex color by mixing it with white.
+	 *
+	 * @param string $hex    Base color.
+	 * @param float  $amount Mix percentage with white (0-1).
+	 * @return string
+	 */
+	function mozda_lighten_hex_color( $hex, $amount = 0.5 ) {
+		return mozda_mix_hex_colors( $hex, '#FFFFFF', $amount );
+	}
+}
+
+if ( ! function_exists( 'mozda_darken_hex_color' ) ) {
+	/**
+	 * Darken a hex color by mixing it with black.
+	 *
+	 * @param string $hex    Base color.
+	 * @param float  $amount Mix percentage with black (0-1).
+	 * @return string
+	 */
+	function mozda_darken_hex_color( $hex, $amount = 0.5 ) {
+		return mozda_mix_hex_colors( $hex, '#000000', $amount );
+	}
+}
+
+if ( ! function_exists( 'mozda_get_contrast_color' ) ) {
+	/**
+	 * Return a contrasting color (black or white) for legibility.
+	 *
+	 * @param string $hex   Base color.
+	 * @param string $dark  Preferred dark color.
+	 * @param string $light Preferred light color.
+	 * @return string
+	 */
+	function mozda_get_contrast_color( $hex, $dark = '#000000', $light = '#FFFFFF' ) {
+		$rgb = mozda_hex_to_rgb_array( $hex );
+
+		if ( null === $rgb ) {
+			return mozda_normalize_hex_color( $dark ) ?: '#000000';
+		}
+
+		list( $r, $g, $b ) = $rgb;
+
+		$relative = array_map(
+			function( $channel ) {
+				$channel = $channel / 255;
+				return ( $channel <= 0.03928 ) ? ( $channel / 12.92 ) : pow( ( $channel + 0.055 ) / 1.055, 2.4 );
+			},
+			array( $r, $g, $b )
+		);
+
+		$luminance = 0.2126 * $relative[0] + 0.7152 * $relative[1] + 0.0722 * $relative[2];
+
+			return ( $luminance > 0.5 ? mozda_normalize_hex_color( $dark ) : mozda_normalize_hex_color( $light ) ) ?: '#FFFFFF';
+	}
+}
+
+// ========================================================
+// Site title badge helper
+// ========================================================
+
+if ( ! function_exists( 'mozda_output_site_title_badge' ) ) {
+	/**
+	 * Inject CSS variable for the site title badge image.
+	 */
+	function mozda_output_site_title_badge() {
+		$badge_url = '';
+
+		/**
+		 * Allow developers to short-circuit the badge lookup.
+		 *
+		 * @param string $badge_url Absolute URL to the badge image.
+		 */
+		$badge_url = apply_filters( 'mozda_site_title_badge_url', $badge_url );
+
+		if ( ! $badge_url ) {
+$attachment = get_page_by_title( 'avatar3', OBJECT, 'attachment' );
+
+			if ( $attachment instanceof WP_Post ) {
+				$maybe = wp_get_attachment_image_url( $attachment->ID, 'thumbnail' );
+				if ( $maybe ) {
+					$badge_url = $maybe;
+				}
+			}
+		}
+
+		if ( ! $badge_url ) {
+			return;
+		}
+
+		printf(
+			'<style id="mozda-site-title-badge">:root{--site-title-badge:url("%s");}</style>' . "\n",
+			esc_url( $badge_url )
+		);
+	}
+}
+add_action( 'wp_head', 'mozda_output_site_title_badge', 20 );
 
 // ========================================================
 // Enqueue scripts and styles
@@ -537,22 +719,81 @@ if ( ! function_exists( 'tfm_get_category_slugs' ) ) {
 
 		foreach( $category as $the_category ) {
 
-			// Additional color classes
-			$slug_color[] = '' !== get_theme_mod( 'category_slug_color_' . $the_category->slug . '', '' ) || '' !== get_theme_mod( 'category_slug_color', $customizer_settings['category_slug_color'] ) ? 'has-slug-color' : '';
-			$slug_color[] = '' !== get_theme_mod( 'category_slug_background_' . $the_category->slug . '', '' ) || '' !== get_theme_mod( 'category_slug_background', $customizer_settings['category_slug_background'] ) ? 'has-slug-background' : '';
+			$classes = array(
+				sanitize_html_class( 'cat-slug-' . $the_category->slug ),
+				sanitize_html_class( 'cat-id-' . $the_category->cat_ID ),
+			);
 
-			$slug_colors = array_filter($slug_color);
-			
-			$slug_css = count($slug_colors) !== 0 ? ' ' . implode(' ', $slug_color) : '';
+			// Legacy class support for existing theme mods.
+			if ( '' !== get_theme_mod( 'category_slug_color_' . $the_category->slug, '' ) || '' !== get_theme_mod( 'category_slug_color', $customizer_settings['category_slug_color'] ) ) {
+				$classes[] = 'has-slug-color';
+			}
+			if ( '' !== get_theme_mod( 'category_slug_background_' . $the_category->slug, '' ) || '' !== get_theme_mod( 'category_slug_background', $customizer_settings['category_slug_background'] ) ) {
+				$classes[] = 'has-slug-background';
+			}
+
+			$accent = get_term_meta( $the_category->term_id, 'mozda_accent_color', true );
+
+			if ( ! $accent ) {
+				$accent = get_theme_mod( 'category_slug_background_' . $the_category->slug, '' );
+			}
+
+			if ( ! $accent ) {
+				$accent = get_theme_mod( 'category_slug_background', $customizer_settings['category_slug_background'] );
+			}
+
+			$accent = mozda_normalize_hex_color( $accent );
+
+			$text_color = get_theme_mod( 'category_slug_color_' . $the_category->slug, '' );
+
+			if ( ! $text_color ) {
+				$text_color = get_theme_mod( 'category_slug_color', $customizer_settings['category_slug_color'] );
+			}
+
+			$text_color = mozda_normalize_hex_color( $text_color );
+
+			$style_rules = array();
+
+			if ( $accent ) {
+				$classes[]   = 'has-category-accent';
+				$accent_soft = mozda_lighten_hex_color( $accent, 0.75 );
+				$accent_edge = mozda_darken_hex_color( $accent, 0.15 );
+
+				$style_rules[] = '--mozda-category-accent:' . $accent;
+
+				if ( $accent_soft ) {
+					$style_rules[] = '--mozda-category-accent-soft:' . $accent_soft;
+					if ( ! $text_color ) {
+						$text_color = mozda_get_contrast_color( $accent_soft );
+					}
+				}
+
+				if ( $accent_edge ) {
+					$style_rules[] = '--mozda-category-border:' . $accent_edge;
+				}
+			}
+
+			if ( $text_color ) {
+				$classes[]    = 'has-category-foreground';
+				$style_rules[] = '--mozda-category-foreground:' . $text_color;
+			}
+
+			$style_attr = '';
+
+			if ( ! empty( $style_rules ) ) {
+				$style_attr = ' style="' . esc_attr( implode( ';', $style_rules ) . ';' ) . '"';
+			}
+
+			$class_attr = implode( ' ', array_unique( array_filter( $classes ) ) );
 
 			$count++;
 
-			$html.= '<li class="cat-slug-' . esc_attr( $the_category->slug ) . ' cat-id-' . esc_attr( $the_category->cat_ID ) . $slug_css . '">';
+			$html .= '<li class="' . esc_attr( $class_attr ) . '"' . $style_attr . '>';
 			// "In" text string
 			if ( $count === 1 && tfm_toggle_entry_meta( 'in' ) ) {
-				$html .= '<span class="screen-reader-text">' . esc_html__( 'Posted in', 'mozda' ) . '</span><i dir="ltr">' . esc_html__( 'in', 'mozda' ) . '</i> ';
+				$html .= '<span class="screen-reader-text">' . esc_html__( 'Posted in', 'mozda' ) . '</span><span class="category-prefix" dir="ltr" aria-hidden="true">' . esc_html__( 'in', 'mozda' ) . '</span> ';
 			}
-			$html .= '<a href="' . get_category_link( $the_category->cat_ID ) . '" class="cat-link-' . esc_attr( $the_category->cat_ID ) . '">' . esc_html( $the_category->cat_name ) . '</a></li>';
+			$html .= '<a href="' . esc_url( get_category_link( $the_category->cat_ID ) ) . '" class="category-pill cat-link-' . esc_attr( $the_category->cat_ID ) . '">' . esc_html( $the_category->cat_name ) . '</a></li>';
 
 		}
 

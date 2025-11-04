@@ -105,6 +105,10 @@ Version: 1.2.1
 	--entry-meta-icon-color: var(--light-grey);
 	--entry-meta-border-color:  var(--very-light-grey);
 	--excerpt-color:  var(--medium-grey);
+	--category-pill-background: rgba(137, 33, 107, 0.12);
+	--category-pill-border: rgba(137, 33, 107, 0.25);
+	--category-pill-foreground: var(--entry-meta-color);
+	--category-pill-hover-shadow: 0 10px 25px rgba(0,0,0,0.15);
 	--entry-border-color:  var(--very-light-grey);
 	--avatar-border-color:  var(--white);
 	--cover-meta-color:  var(--cover-primary-color);
@@ -1309,11 +1313,16 @@ body.custom-background.tfm-dark-mode {
 /*	--header-background: var(--very-dark-grey);*/
 /*	--toggle-sidebar-background: var(--very-dark-grey);*/
 /*	--body-background: var(--very-dark-grey);*/
+	--body-background: #05060a;
+	--single-entry-font-color: var(--white);
 	--body-font-color: var(--white);
 	--entry-color: var(--white);
 	--entry-title-color: var(--white);
---default-border-color: rgba(255,255,255,0.2);
---default-highlight-background: rgba(255,255,255,0.1);
+	--category-pill-background: rgba(255, 255, 255, 0.12);
+	--category-pill-border: rgba(255, 255, 255, 0.25);
+	--category-pill-foreground: var(--white);
+	--default-border-color: rgba(255,255,255,0.2);
+	--default-highlight-background: rgba(255,255,255,0.1);
 }
 
 body.tfm-dark-mode .hidden-dark-theme,
