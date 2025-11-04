@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-		<main id="main" class="site-main">
+		<main id="main" class="site-main" role="main" tabindex="-1">
 
 		<div id="primary" class="content-area the-post">
 

@@ -182,8 +182,8 @@ if ( ! function_exists( 'tfm_scripts' ) ) {
 		wp_enqueue_style( 'tfm-google-font-jakarta', tfm_fonts_url('jakarta'), array(), '1.0.0' );
 		wp_enqueue_style('tfm-core-style', get_template_directory_uri() . '/style.css', array(), $theme_version, 'all');
 		wp_enqueue_style('tfm-gutenberg-style', get_template_directory_uri() . '/css/gutenberg.css', array(), '1.0.0', 'all');
-		wp_enqueue_style('tfm-graphic-enhancements', get_template_directory_uri() . '/css/graphic-enhancements.css', array('tfm-core-style'), '1.0.0', 'all');
-		wp_enqueue_style('tfm-cool-graphics', get_template_directory_uri() . '/css/cool-graphics.css', array('tfm-graphic-enhancements'), '1.0.0', 'all');
+		wp_enqueue_style('tfm-graphic-enhancements', get_template_directory_uri() . '/css/graphic-enhancements.css', array('tfm-core-style'), '1.0.0', 'print');
+		wp_enqueue_style('tfm-cool-graphics', get_template_directory_uri() . '/css/cool-graphics.css', array('tfm-graphic-enhancements'), '1.0.0', 'print');
 		wp_style_add_data( 'tfm-core-style', 'rtl', 'replace' );
 		wp_style_add_data( 'tfm-gutenberg-style', 'rtl', 'replace' );
 		if ( is_rtl() ) {
@@ -197,7 +197,26 @@ if ( ! function_exists( 'tfm_scripts' ) ) {
 		}
 
 		// Main JS
-		wp_enqueue_script( 'tfm-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.0', false);
+		wp_enqueue_script( 'tfm-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), $theme_version, true);
+		wp_script_add_data( 'tfm-main', 'defer', true );
+		wp_add_inline_script(
+			'tfm-main',
+			'window.TFM_THEME = window.TFM_THEME || {}; window.TFM_THEME.baseUrl = ' . wp_json_encode( trailingslashit( get_template_directory_uri() ) ) . ';',
+			'before'
+		);
+
+		wp_enqueue_script( 'mozda-live-search', get_template_directory_uri() . '/js/search-live.js', array(), $theme_version, true );
+		wp_script_add_data( 'mozda-live-search', 'defer', true );
+		wp_localize_script(
+			'mozda-live-search',
+			'mozdaLiveSearch',
+			array(
+				'ajaxUrl'   => admin_url( 'admin-ajax.php' ),
+				'nonce'     => wp_create_nonce( 'mozda_live_search' ),
+				'noResults' => esc_html__( 'No matches yet—keep typing!', 'mozda' ),
+				'searching' => esc_html__( 'Searching…', 'mozda' ),
+			)
+		);
 
 		// Comments
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -443,7 +462,33 @@ if ( ! function_exists( 'tfm_toggle_icon' ) ) {
 
 		$html = '';
 
-		$html .= '<div class="toggle toggle-' . esc_attr( $icon . $mobile_toggle . $show_icon ) . '">';
+		$attributes = array(
+			'type'  => 'button',
+			'class' => 'toggle toggle-' . $icon . $mobile_toggle . $show_icon,
+		);
+
+		if ( in_array( $icon, array( 'menu', 'search' ), true ) ) {
+			$attributes['aria-expanded'] = 'false';
+		}
+
+		if ( 'menu' === $icon ) {
+			$attributes['aria-controls'] = 'toggle-sidebar';
+		}
+
+		if ( 'search' === $icon ) {
+			$attributes['aria-controls'] = 'toggle-search-sidebar';
+		}
+
+		if ( 'color-mode' === $icon ) {
+			$attributes['aria-pressed'] = 'false';
+		}
+
+		$attr_string = '';
+		foreach ( $attributes as $attr => $value ) {
+			$attr_string .= sprintf( ' %1$s="%2$s"', esc_attr( $attr ), esc_attr( $value ) );
+		}
+
+		$html .= '<button' . $attr_string . '>';
 
 		if ( $icon === 'menu' ) {
 
@@ -464,7 +509,7 @@ if ( ! function_exists( 'tfm_toggle_icon' ) ) {
 
 		}
 
-		$html .= '</div>';
+		$html .= '</button>';
 
 		echo wp_kses_post( $html );
 
@@ -2282,10 +2327,15 @@ function tfm_theme_includes() {
 	require get_parent_theme_file_path( '/inc/hooks.php' );
 	require get_parent_theme_file_path( '/inc/plugin-filters.php' );
 	require get_parent_theme_file_path( '/inc/customizer/customizer.php' );
-	require get_parent_theme_file_path( '/inc/customizer/customizer_colors.php' );
-	require get_parent_theme_file_path( '/inc/css/custom_css.php' );
-	require get_parent_theme_file_path( '/inc/gutenberg_color_palette.php' );
-	require get_parent_theme_file_path( '/inc/sanitization.php' );
+		require get_parent_theme_file_path( '/inc/customizer/customizer_colors.php' );
+		require get_parent_theme_file_path( '/inc/css/custom_css.php' );
+		require get_parent_theme_file_path( '/inc/sanitization.php' );
+		require get_parent_theme_file_path( '/inc/branded-sections.php' );
+		require get_parent_theme_file_path( '/inc/term-meta.php' );
+		require get_parent_theme_file_path( '/inc/post-meta.php' );
+		require get_parent_theme_file_path( '/inc/block-patterns.php' );
+		require get_parent_theme_file_path( '/inc/live-search.php' );
+		require get_parent_theme_file_path( '/inc/starter-content.php' );
 	// Woocommerce
 	if ( current_theme_supports( 'woocommerce') && class_exists('WooCommerce')) {
 		require get_parent_theme_file_path( '/inc/woocommerce-functions.php' );

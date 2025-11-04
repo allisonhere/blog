@@ -27,6 +27,10 @@ $tfm_vars = tfm_template_vars( 'content', array( 'count' => $count ));
 
 	tfm_post_inner_open();
 
+	if ( ! is_single() && isset( $args['count'] ) && 1 === (int) $args['count'] ) {
+		do_action( 'mozda_archive_intro_card' );
+	}
+
 	// ========================================================
 	// Open single() entry header/cover wrapper
 	// ========================================================

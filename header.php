@@ -32,6 +32,21 @@ $tfm_vars = tfm_template_vars('', false);
 
 	<?php wp_body_open(); ?>
 
+	<script>
+	(function() {
+		try {
+			var storedMode = localStorage.getItem('tfm-color-mode');
+			if (storedMode && typeof storedMode === 'string') {
+				document.body.classList.add(storedMode);
+			}
+		} catch (error) {
+			// Local storage unavailable – fall back to theme default.
+		}
+	})();
+	</script>
+
+	<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to main content', 'mozda' ); ?></a>
+
 	<!-- toggle sidebar overlay -->
 	<div class="body-fade menu-overlay"></div>
 	<div class="body-fade search-overlay"></div>
@@ -43,7 +58,7 @@ $tfm_vars = tfm_template_vars('', false);
 
 	?>
 
-	<header id="site-header" class="site-header glass-header <?php echo esc_attr( get_theme_mod( 'tfm_header_layout', 'logo-left-menu-right' ) ) . esc_attr( $tfm_vars['sticky_nav'] . $tfm_vars['sticky_mobile_nav'] . $tfm_vars['header_size'] . $tfm_vars['header_search_input'] . $tfm_vars['header_toggle_icons'] . $tfm_vars['header_background'] . $tfm_vars['header_primary_nav'] . $tfm_vars['header_secondary_nav'] . $tfm_vars['header_third_nav'] . $tfm_vars['header_split_menu'] . $tfm_vars['header_social_icons'] . $tfm_vars['header_overlay'] ); ?>">
+	<header id="site-header" role="banner" class="site-header glass-header <?php echo esc_attr( get_theme_mod( 'tfm_header_layout', 'logo-left-menu-right' ) ) . esc_attr( $tfm_vars['sticky_nav'] . $tfm_vars['sticky_mobile_nav'] . $tfm_vars['header_size'] . $tfm_vars['header_search_input'] . $tfm_vars['header_toggle_icons'] . $tfm_vars['header_background'] . $tfm_vars['header_primary_nav'] . $tfm_vars['header_secondary_nav'] . $tfm_vars['header_third_nav'] . $tfm_vars['header_split_menu'] . $tfm_vars['header_social_icons'] . $tfm_vars['header_overlay'] ); ?>">
 
 		<?php tfm_inside_header(); ?>
 

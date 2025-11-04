@@ -19,7 +19,7 @@ $tfm_vars = tfm_template_vars();
 
 get_header(); ?>
 
-		<main id="main" class="site-main<?php echo esc_attr( $tfm_vars['show_pagination_numbers']  . $tfm_vars['show_pagination_arrows'] ); ?>">z
+		<main id="main" class="site-main<?php echo esc_attr( $tfm_vars['show_pagination_numbers']  . $tfm_vars['show_pagination_arrows'] ); ?>" role="main" tabindex="-1">
 
 		<?php tfm_before_loop(); ?>
 

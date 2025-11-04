@@ -599,7 +599,8 @@ body::before {
 	position: relative;
 	padding: 0.25rem 0.75rem;
 	border-radius: 20px;
-	background: rgba(218, 68, 83, 0.1);
+	background: var(--default-highlight-background); /* Subtle background */
+	border: 1px solid var(--default-border-color); /* Subtle border */
 	transition: var(--hover-transition);
 }
 

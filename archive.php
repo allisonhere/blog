@@ -14,7 +14,7 @@ $tfm_vars = tfm_template_vars( 'archive', $args = false );
 
 get_header(); ?>
 
-		<main id="main" class="site-main<?php echo esc_attr( $tfm_vars['show_pagination_numbers'] . $tfm_vars['show_pagination_prev_next']  ); ?>">
+		<main id="main" class="site-main<?php echo esc_attr( $tfm_vars['show_pagination_numbers'] . $tfm_vars['show_pagination_prev_next']  ); ?>" role="main" tabindex="-1">
 
 		<?php tfm_before_loop(); ?>
 

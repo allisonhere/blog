@@ -139,9 +139,20 @@ function tfm_general_settings( ) {
 		'tfm_post_tag_color_dark' => '',
 		'category_slug_background_dark' => '#cfd0d2',
 		'category_slug_color_dark' => '#000000',
-
-
-
+		// Branded sections defaults
+		'branded_hero_heading' => 'Welcome to the story',
+		'branded_hero_subheading' => 'Insights, experiments, and notes from the journey.',
+		'branded_hero_button_label' => 'Start reading',
+		'branded_hero_button_url' => '',
+		'branded_newsletter_heading' => 'Stay in the loop',
+		'branded_newsletter_text' => 'Join the newsletter to receive curated notes once a week.',
+		'branded_newsletter_shortcode' => '',
+		'branded_post_footer_heading' => 'Keep exploring',
+		'branded_post_footer_text' => 'Readers also enjoyed these picks.',
+		'branded_post_footer_button_label' => 'Browse the archive',
+		'branded_post_footer_button_url' => '',
+		'branded_accent_fallback' => '#da4453',
+		'featured_badge_default_label' => 'Featured',
 
 	);
 

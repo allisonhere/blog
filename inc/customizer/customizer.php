@@ -14,6 +14,7 @@ require( get_template_directory() . '/inc/customizer/custom_controls.php' );
 
 // Load the sections
 require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-branded.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-homepage.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-archive.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-single.php' );
